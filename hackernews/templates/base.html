@@ -20,17 +20,17 @@
 <body>
 	<nav class="navbar navbar-inverse" role="navigation">
 		<div class="container">
-			<a class="navbar-brand" href="/">Tuts+ News</a>
+			<a class="navbar-brand" href="{% url 'index' %}">Tuts+ News</a>
 
 			{% if user.is_authenticated %}
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">{{ user.username }}</a></li>
-					<li><a href="/story/">Submit</a></li>
-					<li><a href="/logout/">Sign Out</a></li>
+					<li><a href="{% url 'story' %}">Submit</a></li>
+					<li><a href="{% url 'logout' %}">Sign Out</a></li>
 				</ul>
 			{% else %}
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/login">Sign In</a></li>
+					<li><a href="{% url 'login' %}">Sign In</a></li>
 				</ul>
 
 				<a class="btn btn-primary navbar-btn navbar-right" href="#">Sign Up</a>

@@ -14,7 +14,7 @@
 			<small class="text-muted">
 				({{ story.domain }}) 
 				{% if user.is_authenticated and story not in liked_stories %}
-					<a id="story-vote-{{ story.id }}" class="vote" href="/vote/">vote</a>
+					<a id="story-vote-{{ story.id }}" class="vote" href="{% url 'vote' %}">vote</a>
 				{% endif %}
 				<br>
 				{{ story.points }} points by {{ story.moderator.username }} {{ story.created_at|age }}
