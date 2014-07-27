@@ -6,4 +6,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', 'stories.views.index'),
+    url(r'^story/$', 'stories.views.story'),
 )
