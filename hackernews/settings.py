@@ -60,6 +60,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'hackernews/static'),
 )
 
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
+LOGIN_REDIRECT_URL = '/'
+
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
