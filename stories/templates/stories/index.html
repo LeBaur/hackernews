@@ -6,10 +6,8 @@
 {% for story in stories %}
 	<li>
 		<p>
-			<a href="{{ story.url }}">{{ story.title }}</a><span>{{ story.domain }}</span>
-		</p>
-		<p>
-			{{ story.points }} points by {{ story.moderator.username }} {{ story.created_at|age }}
+			<a href="{{ story.url }}">{{ story.title }}</a> <small class="text-muted">({{ story.domain }})</small><br>
+			<small class="text-muted">{{ story.points }} points by {{ story.moderator.username }} {{ story.created_at|age }}</small>
 		</p>
 	</li>
 {% endfor %}
